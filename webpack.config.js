@@ -26,34 +26,27 @@ var page = function({ title, template, chunks, filename }) {
 
 var commonConfig = {
   entry: {
-    songs: ['babel-polyfill', 'whatwg-fetch', path.join(__dirname, 'src', 'pages', 'songs', 'index')],
-    contact: ['babel-polyfill', 'whatwg-fetch', path.join(__dirname, 'src', 'pages', 'contact', 'index')],
-    song: ['babel-polyfill', 'whatwg-fetch', path.join(__dirname, 'src', 'pages', 'song', 'index')]
+    home: ['babel-polyfill', 'whatwg-fetch', path.join(__dirname, 'src', 'pages', 'home', 'index')],
+    article: ['babel-polyfill', 'whatwg-fetch', path.join(__dirname, 'src', 'pages', 'article', 'index')],
   },
   output: {
     filename: '[name][hash].js',
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
-    new Dotenv(),
+    // new Dotenv(),
     page({
-      title: 'Play',
-      template: path.join(__dirname, 'src', 'pages', 'songs', 'index.html'),
-      chunks: ['songs'],
+      title: 'Home',
+      template: path.join(__dirname, 'src', 'pages', 'home', 'index.html'),
+      chunks: ['home'],
       filename: path.resolve(__dirname, 'dist', 'index.html')
     }),
     page({
-        title: 'Contact',
-        template: path.join(__dirname, 'src', 'pages', 'contact', 'index.html'),
-        chunks: ['contact'],
-        filename: path.resolve(__dirname, 'dist', 'contact', 'index.html')
-      }),
-    page({
-      title: 'Song',
-      template: path.join(__dirname, 'src', 'pages', 'song', 'index.html'),
-      chunks: ['song'],
-      filename: path.resolve(__dirname, 'dist', 'song', 'index.html')
-    })
+        title: 'Article',
+        template: path.join(__dirname, 'src', 'pages', 'article', 'index.html'),
+        chunks: ['article'],
+        filename: path.resolve(__dirname, 'dist', 'article', 'index.html')
+      })
   ],
   module: {
     rules: [
@@ -136,7 +129,7 @@ var prodConfig = {
     }),
     new CleanWebpackPlugin(['dist']),
     new CriticalPlugin({
-      src: path.join(__dirname, 'src', 'pages', 'songs', 'index.html'),
+      src: path.join(__dirname, 'src', 'pages', 'home', 'index.html'),
       inline: true,
       minify: true,
       dest: path.join(__dirname, 'dist', 'index.html')
