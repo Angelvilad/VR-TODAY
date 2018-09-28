@@ -77,13 +77,13 @@ var commonConfig = {
   },
   resolve: {
     alias: {
-      components: path.resolve(__dirname, 'src', 'components'),
-      assets: path.resolve(__dirname, 'src', 'assets'),
-      styles: path.resolve(__dirname, 'src', 'styles'),
-      utils: path.resolve(__dirname, 'src', 'utils'),
-      data: path.resolve(__dirname, 'src', 'data'),
-      services: path.resolve(__dirname, 'src', 'services'),
-      pages: path.resolve(__dirname, 'src', 'pages')
+      // components: path.resolve(__dirname, 'src', 'components'),
+      // assets: path.resolve(__dirname, 'src', 'assets'),
+      // styles: path.resolve(__dirname, 'src', 'styles'),
+      // utils: path.resolve(__dirname, 'src', 'utils'),
+      // data: path.resolve(__dirname, 'src', 'data'),
+      // services: path.resolve(__dirname, 'src', 'services'),
+      // pages: path.resolve(__dirname, 'src', 'pages')
     }
   },
   devtool: 'source-map'
