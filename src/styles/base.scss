@@ -1,0 +1,44 @@
+@import '~styles/normalize';
+@import '~styles/utils';
+@import '~styles/settings';
+
+body {
+    padding-bottom: $footer-height + 60px;
+}
+
+h1 {
+    @include fontSize($font-size-xxl);
+    font-family: $font-family-main;
+}
+
+p, div {
+    font-family: $font-family;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+header {
+    background-color: $primary-color;
+    min-height: 89px;
+    display: flex;
+    align-items: center;
+  justify-content: space-between;
+}
+
+footer {
+    height: $footer-height;
+    box-sizing: border-box;
+    position: fixed;
+    background-color: $white;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $box-shadow-default;
+}

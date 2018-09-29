@@ -1,0 +1,9 @@
+@import '~styles/settings.scss';
+
+header {
+    background-color: $primary-color;
+    min-height: 89px;
+    display: flex;
+    align-items: center;
+  justify-content: space-between;
+}
