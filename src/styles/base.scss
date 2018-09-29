@@ -26,7 +26,51 @@ header {
     min-height: 89px;
     display: flex;
     align-items: center;
-  justify-content: space-between;
+    justify-content: space-between;
+    padding: 0 $gutter-padding;
+
+    .title-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        .title {
+          color: $white;
+        }
+
+        .headphones-icon {
+            font-size: 2em;
+            color: $white;
+            padding-right: 5px;
+          }
+    }
+
+    .menu-container {
+        
+        .hamburger-icon {
+            font-size: 2em;
+            color: $white;
+        }
+    }
+
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+
+    a {
+        text-transform: uppercase;
+        font-weight: bold;
+        text-decoration: none;
+        color: $link-color;
+        @include fontSize($font-size-m);
+        padding: $gutter-padding 10px;
+    
+        &:hover {
+          color: lighten($link-color, 25%);
+        }
+    }
 }
 
 footer {
