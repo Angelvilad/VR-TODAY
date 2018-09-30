@@ -34,7 +34,7 @@ var commonConfig = {
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
-    // new Dotenv(),
+    new Dotenv(),
     page({
       title: 'Home',
       template: path.join(__dirname, 'src', 'pages', 'home', 'index.html'),
@@ -82,7 +82,7 @@ var commonConfig = {
       styles: path.resolve(__dirname, 'src', 'styles'),
       // utils: path.resolve(__dirname, 'src', 'utils'),
       // data: path.resolve(__dirname, 'src', 'data'),
-      // services: path.resolve(__dirname, 'src', 'services'),
+      services: path.resolve(__dirname, 'src', 'services'),
       pages: path.resolve(__dirname, 'src', 'pages')
     }
   },

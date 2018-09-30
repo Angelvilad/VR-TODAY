@@ -17,6 +17,7 @@
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
+    "dotenv-webpack": "^1.5.7",
     "ejs": "^2.6.1",
     "ejs-html-loader": "^3.1.0",
     "eslint": "^5.5.0",
@@ -42,7 +43,6 @@
     "@babel/preset-env": "^7.0.0",
     "animejs": "^2.2.0",
     "babel-loader": "^8.0.2",
-    "dotenv-webpack": "^1.5.7",
     "eslint-config-airbnb-base": "^13.1.0",
     "pubsub-js": "^1.6.1",
     "query-string": "5.0.0",
