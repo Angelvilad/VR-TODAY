@@ -11,6 +11,7 @@ export const createArticle = ({
         <a class="article-title" href="/article/?id=${id}">${title}</a>
         </div>
         <p class="article-author">${author.user_name}</p>
+        <p class="article-text">${text_article}</p>
     `;
     return article;
 };
