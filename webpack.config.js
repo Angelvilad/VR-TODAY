@@ -27,7 +27,7 @@ var page = function({ title, template, chunks, filename }) {
 var commonConfig = {
   entry: {
     home: ['@babel/polyfill', 'whatwg-fetch', path.join(__dirname, 'src', 'pages', 'home', 'index')],
-    // article: ['@babel/polyfill', 'whatwg-fetch', path.join(__dirname, 'src', 'pages', 'article', 'index')],
+    article: ['@babel/polyfill', 'whatwg-fetch', path.join(__dirname, 'src', 'pages', 'article', 'index')],
   },
   output: {
     filename: '[name][hash].js',
@@ -41,12 +41,12 @@ var commonConfig = {
       chunks: ['home'],
       filename: path.resolve(__dirname, 'dist', 'index.html')
     }),
-    // page({
-    //    title: 'Article',
-    //    template: path.join(__dirname, 'src', 'pages', 'article', 'index.html'),
-    //    chunks: ['article'],
-    //    filename: path.resolve(__dirname, 'dist', 'article', 'index.html')
-    //  })
+    page({
+      title: 'Article',
+      template: path.join(__dirname, 'src', 'pages', 'article', 'index.html'),
+      chunks: ['article'],
+      filename: path.resolve(__dirname, 'dist', 'article', 'index.html')
+    })
   ],
   module: {
     rules: [
