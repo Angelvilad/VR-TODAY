@@ -3,23 +3,63 @@
 
 .article {
   margin: $gutter-padding / 2;
+  display: flex;
+  box-sizing: border-box;
+  width: 40%;
+  flex-wrap: wrap;
 
-  .article-image {
-    width: 180px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  .article-title {
-    margin-top: 5px;
-    margin-bottom: 0;
-    color: $primary-color;
-  }
+  .article-resume {
+    width: 100%;
 
+    .article-image {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .video-container{
+      position: relative;
+      height: 0;
+      padding-bottom: percentage(315 / 560);    
+    }
+
+    iframe {
+      position:absolute;
+      left:0;
+      top:0;
+      height: 100%;
+      width: 100%;    
+    }
+
+    .article-title {
+      margin-top: 5px;
+      margin-bottom: 0;
+      @include fontSize($font-size-xl);
+      color: $primary-color;
+    }
+  
+    .description {
+      height: 5rem;
+      overflow: hidden;
+    }
+  }
+  
   .article-author {
+    width: 50%;
     margin-top: 2px;
     text-transform: uppercase;
     @include fontSize($font-size-s);
     color: $gray;
+
+    .avatar {
+      width: 50px;
+      border-radius: 50%;
+    }
   }
+
+  .comments {
+    width: 50%;
+  }
+
+  
 }

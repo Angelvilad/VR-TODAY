@@ -1,15 +1,16 @@
 export const updateArticleDetail = ({
-    title, author, mediaUrl, text_article, data_pub, comments, id
+  title, author, mediaUrl, text_article, data_pub, comments, id
 } = { title: 'No title', author: { user_name: 'No author', user_image: 'No Image' } }) => {
-    const article = document.getElementById('article-detail');
-    const textDiv = text_article ? (
-        `<div class="article-text">
+  const article = document.getElementById('article-detail');
+  const textDiv = text_article ? (
+    `<div class="article-text">
             <p>${text_article}</p>
         </div>`
-    ) : '';
-    const avatar = null;
-    const image = null;
-    article.innerHTML = `
+  ) : '';
+  const avatar = null;
+  const image = null;
+  
+  article.innerHTML = `
     <div class="title-container">
         <h2 title="Article title" class="article-title">${title}</h2>
         <button id="like-button" class="like-button">
@@ -28,3 +29,7 @@ export const updateArticleDetail = ({
     
     `;
 };
+
+export default {
+  updateArticleDetail
+}
