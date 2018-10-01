@@ -14,11 +14,14 @@ export const createArticle = ({
 
   article.innerHTML = `
         <div class="article-resume">
-          <a class="article-title" href="/article/?id=${id}">
+          <a class="article-cover" href="/article/?id=${id}">
             ${cover}
           </a>
-          <div>
+          <div class="title-wrapper">
             <a class="article-title" href="/article/?id=${id}">${title}</a>
+            <a href="/">
+            <i class="fas fa-comments fa-2x"></i>
+            </a>
           </div>
           <div class="description">
             <p class="article-text">${text_article}</p>
@@ -26,11 +29,7 @@ export const createArticle = ({
         </div>
         <div class="article-author">
           <img src="${avatar}" class="avatar" ></img>    
-          <p class="author-name">${author.user_name}</p>            
-        </div>
-        <div class="comments">
-            <a href="/">
-            <p>comments</p>
+          <p class="author-name">${author.user_name}</p>             
         </div>
     `;
   return article; //BIEN
