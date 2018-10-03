@@ -2,6 +2,7 @@ $white: #fefefe;
 $gray: rgba(200,200,200,1);
 $electricgreen: #b4e07a;
 $darkgreen: #35524A;
+$red: red;
 
 $primary-color: $electricgreen;
 $link-color: $darkgreen;
@@ -21,4 +22,14 @@ $font-family: 'PT Serif', serif;
 $font-family-main: 'Poppins', sans-serif;
 
 $footer-height: 58px;
+
+// Animation for like button
+@keyframes heartBeat {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.5);
+    }
+}
 

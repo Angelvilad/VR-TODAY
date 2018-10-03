@@ -7,6 +7,21 @@
 
     .like-container {
         width: 100%;
+
+        .like-button {
+            outline-width: 0;
+            //@include fontSize($font-size-xxxl);
+            background-color: transparent;
+            color: $red;
+            border: none;
+      
+            .fas {
+              animation-name: heartBeat;
+              animation-duration: 1s;
+              animation-iteration-count: infinite;
+              animation-direction: alternate;
+            }
+          }
     }
     
     .article-header {
