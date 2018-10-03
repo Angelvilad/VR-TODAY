@@ -9,14 +9,14 @@ export const createArticle = ({
   const avatar = author.user_image !== 'No Image' ? author.user_image : noAvatar;
 
   const cover = media.type === 'image'
-    ? `<img src="${media.url}" class="article-image" ></img>`
+    ? `<a class="article-cover" href="/article/?id=${id}">
+        <img src="${media.url}" class="article-image" ></img>
+      </a>`
     : `<div class="video-container">${media.url}</div>`
 
   article.innerHTML = `
         <div class="article-resume">
-          <a class="article-cover" href="/article/?id=${id}">
             ${cover}
-          </a>
           <div class="title-wrapper">
             <a class="article-title" href="/article/?id=${id}">${title}</a>
             <a href="/">
