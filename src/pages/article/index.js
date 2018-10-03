@@ -8,7 +8,7 @@ const articleServiceInstance = new ArticleService();
 const query = queryString.parse(window.location.search)
 const articleId = query && query.id;
 
-if (query.id) {
+if (articleId) {
     articleServiceInstance.getArticle(articleId).then((articleJSON) => {
         updateArticleDetail(articleJSON);
     });

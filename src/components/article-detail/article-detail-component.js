@@ -1,11 +1,21 @@
 import noAvatar from 'assets/noavatar.jpg';
 
+const isLiked = id => localStorage.getItem(`article-${id}`);
+
+const toggleLike = (id) => {
+  const likeValue = isLiked(id) === 'true' ? 'false' : 'true';
+  localStorage.setItem(`article-${id}`, likeValue);
+};
+
+const setInitialLikeValue = (likeButton, liked) => {
+  if (liked === 'true') likeButton.children[0].classList.add('fas');
+};
+
 export const updateArticleDetail = ({
   title, author, media, text_article, data_pub, comments, id
 } = { title: 'No title', author: { user_name: 'No author', user_image: 'No Image' } }) => {
   const article = document.getElementById('article-detail');
   
-  console.log(noAvatar);
   const avatar = author.user_image !== 'No Image' ? author.user_image : noAvatar;
   const cover = media.type === 'image'
     ? `<img src="${media.url}" class="article-image" ></img>`
@@ -13,7 +23,9 @@ export const updateArticleDetail = ({
   
   article.innerHTML = `
         <div class="like-container">
-            <i class="far fa-heart fa-2x"></i>
+            <button id="like-button" class="like-button">
+                <i class="far fa-heart fa-2x"></i>
+            </button>
         </div>
         <div class="article-header">
             <div class="title-container">    
@@ -34,8 +46,17 @@ export const updateArticleDetail = ({
         </div>
         
     `;
+    
+    const likeButton = document.getElementById('like-button');
+
+    setInitialLikeValue(likeButton, isLiked(id));
+    
+    likeButton.addEventListener('click', () => {
+        likeButton.children[0].classList.toggle('fas');
+        toggleLike(id);
+    });
 };
 
 export default {
   updateArticleDetail
-}
+};
