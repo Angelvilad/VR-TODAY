@@ -1,7 +1,7 @@
 import noAvatar from 'assets/noavatar.jpg';
 
 export const createArticle = ({
-  title, author, media, text_article, data_pub, comments, id
+  title, author, media, text_article, introduction, data_pub, id
 } = { title: 'No title', author: { user_name: 'No author', user_image: 'No Image' } }) => {
   const article = document.createElement('div');
   article.classList.add('article');
@@ -23,8 +23,8 @@ export const createArticle = ({
             <i class="fas fa-comments fa-2x"></i>
             </a>
           </div>
-          <div class="description">
-            <p class="article-text">${text_article}</p>
+          <div class="introduction">
+            <p>${introduction}</p>
           </div>
         </div>
         <div class="article-author">
