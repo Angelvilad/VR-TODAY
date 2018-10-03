@@ -61,7 +61,9 @@ var commonConfig = {
           {
             loader: 'file-loader',
             options: {
-              name: 'assets/[path][name].[hash].[ext]'
+              name: '[name].[hash].[ext]',
+              outputPath: 'assets/images/',
+              publicPath: '/assets/images/'
             }
           },
           {
