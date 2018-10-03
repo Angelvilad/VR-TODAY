@@ -1,32 +1,38 @@
+import noAvatar from 'assets/noavatar.jpg';
+
 export const updateArticleDetail = ({
-  title, author, mediaUrl, text_article, data_pub, comments, id
+  title, author, media, text_article, data_pub, comments, id
 } = { title: 'No title', author: { user_name: 'No author', user_image: 'No Image' } }) => {
   const article = document.getElementById('article-detail');
-  const textDiv = text_article ? (
-    `<div class="article-text">
-            <p>${text_article}</p>
-        </div>`
-  ) : '';
-  const avatar = null;
-  const image = null;
+  
+  console.log(noAvatar);
+  const avatar = author.user_image !== 'No Image' ? author.user_image : noAvatar;
+  const cover = media.type === 'image'
+    ? `<img src="${media.url}" class="article-image" ></img>`
+    : `<div class="video-container">${media.url}</div>`
   
   article.innerHTML = `
-    <div class="title-container">
-        <h2 title="Article title" class="article-title">${title}</h2>
-        <button id="like-button" class="like-button">
-            <i class="far fa-heart"></i>
-        </button>
-    </div>
-    <img src="${image}" class="song-image" ></img>
-    <div class="author">
-        <p title="Author name" class="article-author">${author.user_name}</p>
-        <img src="${avatar}" class="avatar"></img>
-    </div>
-    ${textDiv}
-    <div class="go-back">
-        <a title="back" class="back" href='javascript:history.back()'><- Go Back</a>
-    </div>
-    
+        <div class="like-container">
+            <i class="far fa-heart fa-2x"></i>
+        </div>
+        <div class="article-header">
+            <div class="title-container">    
+                <h1>${title}</h1>
+            </div>
+
+            <div class="cover-container">
+                ${cover}
+            </div>
+        </div>
+        
+        <div class="article-author">
+            <img src="${avatar}" class="avatar" ></img>    
+            <p class="author-name">${author.user_name}</p>             
+        </div>
+        <div class="text-container">
+            <p class="article-text">${text_article}</p>
+        </div>
+        
     `;
 };
 

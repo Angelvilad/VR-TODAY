@@ -32,7 +32,7 @@ export const createArticle = ({
           <p class="author-name">${author.user_name}</p>             
         </div>
     `;
-  return article; //BIEN
+  return article;
 };
 
 export default {
