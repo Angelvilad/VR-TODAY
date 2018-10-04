@@ -8,6 +8,10 @@
     }
     justify-content: center;
     border: $border-default;
+
+    .header-form {
+      margin: 15px $gutter-padding / 2;
+    }
 }
 
 #notice {
