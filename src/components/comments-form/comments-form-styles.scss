@@ -7,6 +7,7 @@
         width: 70%;
     }
     justify-content: center;
+    border: $border-default;
 }
 
 #notice {
@@ -62,14 +63,14 @@
       min-height: 4em;
       border: solid 1px $border-color;
       @include for-tablet-landscape {
-        width: 100%;
+        width: 90%;
       }
     }
   }
 
   #comments-form-submit {
     display: block;
-    width: 100%;
+    width: 90%;
     background-color: $primary-color;
     color: $white;
     padding: 10px;
