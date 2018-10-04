@@ -12,7 +12,7 @@ const setInitialLikeValue = (likeButton, liked) => {
 };
 
 export const updateArticleDetail = ({
-  title, author, media, text_article, data_pub, comments, id
+  title, author, media, text_article, introduction, data_pub, comments, id
 } = { title: 'No title', author: { user_name: 'No author', user_image: 'No Image' } }) => {
   const article = document.getElementById('article-detail');
   
@@ -30,6 +30,7 @@ export const updateArticleDetail = ({
         <div class="article-header">
             <div class="title-container">    
                 <h1>${title}</h1>
+                <h2>${introduction}</h2>
             </div>
 
             <div class="cover-container">
