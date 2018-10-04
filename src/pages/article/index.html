@@ -7,7 +7,31 @@
   <%- include('../partials/header.ejs') %>
   <div class="container">
     <div id="article-detail" class="article-detail"></div>
+    <div class="contact-form-wrapper">
+      <form id="contact-form">
+        <div class="contact-form-field">
+          <label for="name">Name *</label>
+          <input class="contact-input" type="text" name="name" id="contact-form-name" required>
+        </div>
+        <div class="contact-form-field">
+          <label for="last-name">Last name *</label>
+          <input class="contact-input" type="text" name="last_name" id="contact-form-last-name" required>
+        </div>
+        <div class="contact-form-field">
+          <label for="email">Email *</label>
+          <input class="contact-input" type="email" name="email" id="contact-form-email" required>
+        </div>
+        <div class="contact-form-field contact-textarea">
+          <label for="message">Message *</label>
+          <textarea class="contact-input" name="message" id="contact-form-message" required maxlength="10"
+            placeholder="Escribe un mensaje de no más de 500 caracteres"></textarea>
+        </div>
+        <input type="submit" value="Submit" id="contact-form-submit" />
+      </form>
+      <div id="notice"></div>
+    </div>
   </div>
+  
   <%- include('../partials/footer.ejs') %>
 </body>
 </html>
