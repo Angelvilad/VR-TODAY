@@ -1,4 +1,5 @@
 import { updateHeader } from 'components/header/header-component';
+import { updateCommentsForm} from 'components/comments-form/comments-form-component.js';
 import { updateArticleDetail } from 'components/article-detail/article-detail-component';
 import ArticleService from 'services/article-service';
 import queryString from 'query-string';
@@ -15,3 +16,4 @@ if (articleId) {
 }
 
 updateHeader({ title: 'VR Today!!' });
+updateCommentsForm();
