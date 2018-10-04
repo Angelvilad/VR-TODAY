@@ -7,26 +7,26 @@
   <%- include('../partials/header.ejs') %>
   <div class="container">
     <div id="article-detail" class="article-detail"></div>
-    <div class="contact-form-wrapper">
-      <form id="contact-form">
-        <div class="contact-form-field">
+    <div class="comments-form-wrapper">
+      <form id="comments-form">
+        <div class="comments-form-field">
           <label for="name">Name *</label>
-          <input class="contact-input" type="text" name="name" id="contact-form-name" required>
+          <input class="comments-input" type="text" name="name" id="comments-form-name" required>
         </div>
-        <div class="contact-form-field">
+        <div class="comments-form-field">
           <label for="last-name">Last name *</label>
-          <input class="contact-input" type="text" name="last_name" id="contact-form-last-name" required>
+          <input class="comments-input" type="text" name="last_name" id="comments-form-last-name" required>
         </div>
-        <div class="contact-form-field">
+        <div class="comments-form-field">
           <label for="email">Email *</label>
-          <input class="contact-input" type="email" name="email" id="contact-form-email" required>
+          <input class="comments-input" type="email" name="email" id="comments-form-email" required>
         </div>
-        <div class="contact-form-field contact-textarea">
+        <div class="comments-form-field comments-textarea">
           <label for="message">Message *</label>
-          <textarea class="contact-input" name="message" id="contact-form-message" required maxlength="10"
+          <textarea class="comments-input" name="message" id="comments-form-message" required maxlength="10"
             placeholder="Escribe un mensaje de no más de 500 caracteres"></textarea>
         </div>
-        <input type="submit" value="Submit" id="contact-form-submit" />
+        <input type="submit" value="Submit" id="comments-form-submit" />
       </form>
       <div id="notice"></div>
     </div>

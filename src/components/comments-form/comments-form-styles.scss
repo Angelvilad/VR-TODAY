@@ -1,5 +1,5 @@
 @import '~styles/layout';
-.contact-form-wrapper {
+.comments-form-wrapper {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -17,16 +17,16 @@
   padding: $gutter-padding;
 }
 
-#contact-form {
+#comments-form {
   width: 100%;
   margin: 0 $gutter-padding / 2;
   display: flex;
   flex-wrap: wrap;
 
-  .contact-form-field {
+  .comments-form-field {
     padding: $gutter-padding / 2 0;
     width: 100%;
-    &:not(.contact-textarea) {
+    &:not(.comments-textarea) {
         @include for-tablet-landscape {
         width: 33.3333%;
         padding-right: $gutter-padding;
@@ -67,7 +67,7 @@
     }
   }
 
-  #contact-form-submit {
+  #comments-form-submit {
     display: block;
     width: 100%;
     background-color: $primary-color;
