@@ -1,4 +1,5 @@
 import CommentService from 'services/comment-service';
+import { reportValidity, getFormData} from 'utils/utils';
 
 const addCustomValidation = (input) => {
     if (input.value === input.value.toUpperCase()) {
@@ -39,4 +40,10 @@ export const updateCommentsForm = () => {
     const notice = document.getElementById('notice');
 
     handleValidation (formInputs);
+
+    submitFormButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        submitFormButton.disable = true;
+        reportValidity(commentsForm);
+    })
 }
