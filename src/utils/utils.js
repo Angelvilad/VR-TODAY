@@ -6,7 +6,6 @@ export const appendComponent = (parent, components) =>{
 
 /**
  * PolyFill reportValidity for IE
- * POR AQUI POLYFILL IE11, DIA 6 VIDE 1 MIN 45~(continua luego en comments-form-component)
  */
 export const reportValidity = (form) => {
     if (HTMLFormElement.prototype.reportValidity) {
@@ -22,6 +21,17 @@ export const reportValidity = (form) => {
     }
 };
 
+export const getFormData = (formInputs) => {
+        const formData = {};
+        for (let i = 0; i < formInputs.length; i += 1) {
+            const input = formInputs[i];
+            formData[input.name] = input.value;
+        }
+        return formData;
+}
+
 export default {
-    appendComponent
+    appendComponent,
+    reportValidity,
+    getFormData
 }

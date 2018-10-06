@@ -1,10 +1,10 @@
-import APIService from './API-service';
+    import APIService from './API-service';
 
 class CommentService {
     constructor() {
         this.baseUrl = process.env.API_URL;
         this.APIServiceInstance = new APIService();
-        this.model = 'messages';
+        this.model = 'comments';
     }
 
     async postComment(comment) {
@@ -12,6 +12,4 @@ class CommentService {
     }
 }
 
-export default {
-    CommentService
-}
+export default CommentService;

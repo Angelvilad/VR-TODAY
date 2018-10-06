@@ -45,5 +45,16 @@ export const updateCommentsForm = () => {
         e.preventDefault();
         submitFormButton.disable = true;
         reportValidity(commentsForm);
+        if (commentsForm.checkValidity()) {
+            const commentServiceInstance = new CommentService();
+            commentServiceInstance.postComment(getFormData(formInputs)).then(
+                (response) => {
+                    if (response === true) {
+                        notice.innerHTML = 'Your comment has been sent';
+                    }
+                }
+            );
+            submitFormButton.disable = false;
+        }
     })
 }
