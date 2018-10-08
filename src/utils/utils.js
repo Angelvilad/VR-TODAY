@@ -21,12 +21,15 @@ export const reportValidity = (form) => {
     }
 };
 
-export const getFormData = (formInputs) => {
+export const getFormData = (formInputs, idArticle) => {
         const formData = {};
         for (let i = 0; i < formInputs.length; i += 1) {
             const input = formInputs[i];
             formData[input.name] = input.value;
         }
+        formData.idArticle = idArticle;
+        const now = new Date();
+        formData.regTime = now.toString();
         return formData;
 }
 

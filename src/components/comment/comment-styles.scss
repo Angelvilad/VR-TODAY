@@ -1,0 +1,26 @@
+@import '~styles/settings';
+@import '~styles/utils';
+.comments-list {
+    width: 70%;
+    
+    .comment {
+        display: flex;
+        margin-top: 1rem;
+        border: $border-default;
+        padding: $gutter-padding;
+
+        time {
+            @include fontSize($font-size-s);
+            color: $gray;
+        }
+
+        .user-data {
+            padding: 0 $gutter-padding / 2;
+            border-right: $border-default;
+        }
+
+        .comment-text {
+            padding: 0 $gutter-padding / 2;
+        }
+    }
+}

@@ -19,7 +19,7 @@ export const createArticle = ({
             ${cover}
           <div class="title-wrapper">
             <a class="article-title" href="/article/?id=${id}">${title}</a>
-            <a href="/">
+            <a href="/article/?id=${id}#comments-list">
             <i class="fas fa-comments fa-2x"></i>
             </a>
           </div>

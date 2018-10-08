@@ -1,5 +1,6 @@
 import CommentService from 'services/comment-service';
 import { reportValidity, getFormData} from 'utils/utils';
+import pubSub from 'pubsub-js';
 
 const addCustomValidation = (input) => {
     if (input.value === input.value.toUpperCase()) {
@@ -33,11 +34,12 @@ const handleValidation = (formInputs) => {
     }
 }
 
-export const updateCommentsForm = () => {
+export const updateCommentsForm = (id) => {
     const commentsForm = document.getElementById('comments-form');
     const submitFormButton = document.getElementById('comments-form-submit');
     const formInputs = commentsForm.getElementsByClassName('comments-input');
     const notice = document.getElementById('notice');
+    const idArticle = id;
 
     handleValidation (formInputs);
 
@@ -47,10 +49,11 @@ export const updateCommentsForm = () => {
         reportValidity(commentsForm);
         if (commentsForm.checkValidity()) {
             const commentServiceInstance = new CommentService();
-            commentServiceInstance.postComment(getFormData(formInputs)).then(
+            commentServiceInstance.postComment(getFormData(formInputs,idArticle )).then(
                 (response) => {
                     if (response === true) {
                         notice.innerHTML = 'Your comment has been sent';
+                        pubSub.publish('reload');
                     }
                 }
             );
@@ -58,3 +61,5 @@ export const updateCommentsForm = () => {
         }
     })
 }
+
+export default updateCommentsForm;
