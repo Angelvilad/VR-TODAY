@@ -1,11 +1,15 @@
 @import '~styles/settings';
 @import '~styles/utils';
+@import '~styles/layout';
 
 .article {
   margin: $gutter-padding / 2;
   display: flex;
   box-sizing: border-box;
-  width: 40%;
+  width: 100%;
+  @include for-tablet-portrait {
+    width: 40%;
+}
   flex-wrap: wrap;
 
   .article-resume {

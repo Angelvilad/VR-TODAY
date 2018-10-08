@@ -1,6 +1,7 @@
 @import '~styles/normalize';
 @import '~styles/utils';
 @import '~styles/settings';
+@import '~styles/layout';
 
 body {
     padding-bottom: $footer-height + 60px;
@@ -31,18 +32,20 @@ header {
     justify-content: space-between;
     padding: 0 $gutter-padding;
 
-    a.home {
-        text-decoration: none;
-    }
-
     .title-container {
         display: flex;
         align-items: center;
         justify-content: center;
     
-        .title {
-          color: $white;
+        a.home {
+            text-decoration: none;
+            color: $white;
+            
+            &:hover {
+                color: lighten($link-color, 25%);
+              }
         }
+
 
         .headphones-icon {
             font-size: 2em;
@@ -57,25 +60,81 @@ header {
             font-size: 2em;
             color: $white;
         }
+
+        .login {
+            display: none;
+
+        }
+
+        @include for-tablet-portrait {
+            .login {
+                display: initial;
+            }
+            & .hamburger-icon {
+              display: none;
+            }
+        }
+
+        a.login {
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+            color: $white;
+            @include fontSize($font-size-m);
+        
+            &:hover {
+              color: lighten($link-color, 25%);
+            }
+        }
     }
 
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-
+    display: none;
+    
     a {
+        display: inline-flex;
         text-transform: uppercase;
         font-weight: bold;
         text-decoration: none;
         color: $link-color;
         @include fontSize($font-size-m);
-        margin: 30px 0;
-        padding: 0 10px;
+    }
+
+    .login-nav {
+        display: none;
+    }
     
-        &:hover {
-          color: lighten($link-color, 25%);
+    @include for-tablet-portrait {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+    
+            a {
+                margin: 30px 0;
+                padding: 0 10px;
+            
+                &:hover {
+                  color: lighten($link-color, 25%);
+                }
+            }
+    }
+}
+
+@include for-mobile {
+    .nav-open {
+        display: flex;
+        flex-direction: column;
+        transition: all ease-in 1s;
+
+        a {
+            padding: $gutter-padding / 2 0;
+        }
+
+        .login-nav {
+            display: inline-flex;
+            border-bottom: $border-default;
         }
     }
 }

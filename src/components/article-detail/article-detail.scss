@@ -1,9 +1,13 @@
 .article-detail {
     
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    //justify-content: center;
+    
+
+    @include for-desktop {
+        width: 70%;
+      }
 
     .like-container {
         width: 100%;
