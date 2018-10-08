@@ -1,0 +1,173 @@
+{
+  "comments": [
+    {
+      "name": "Pepe",
+      "last_name": "Grillo",
+      "email": "pepe@pepe.es",
+      "message": "Mensaje 2 12:44",
+      "idArticle": "1",
+      "regTime": "Mon Oct 07 2018 11:44:19 GMT+0200 (hora de verano de Europa central)",
+      "id": 1
+    },
+    {
+      "name": "Dylan",
+      "last_name": "Dylan",
+      "email": "b@dylan.com",
+      "message": "Message for article 2",
+      "idArticle": "2",
+      "regTime": "Mon Oct 08 2018 16:19:25 GMT+0200 (hora de verano de Europa central)",
+      "id": 2
+    },
+    {
+      "name": "Django",
+      "last_name": "Martins",
+      "email": "fg@kl.ch",
+      "message": "Comment for article one",
+      "idArticle": "1",
+      "regTime": "Mon Oct 08 2018 16:20:28 GMT+0200 (hora de verano de Europa central)",
+      "id": 3
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "title": "Article one",
+      "author": {
+        "user_name": "Neo",
+        "user_image": "https://static.comicvine.com/uploads/original/11113/111130700/5699428-3919718399-neo.g.gif"
+      },
+      "media": {
+        "type": "image",
+        "url": "https://www.vrandfun.com/wp-content/uploads/2018/07/dragon-quest-vr-1.jpg"
+      },
+      "text_article": "This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.",
+      "introduction": "This is the article introduction"
+    },
+    {
+      "id": 2,
+      "title": "Article two",
+      "author": {
+        "user_name": "Bob",
+        "user_image": "https://st-listas.20minutos.es/images/2012-04/329064/3508435_640px.jpg?1424188680"
+      },
+      "media": {
+        "type": "image",
+        "url": "https://umdrightnow.umd.edu/sites/umdrightnow.umd.edu/files/umiacs_aug_reality.jpg"
+      },
+      "text_article": "This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.",
+      "introduction": "This is the article introduction"
+    },
+    {
+      "id": 3,
+      "title": "Article three",
+      "author": {
+        "user_name": "Han Alone",
+        "user_image": "http://comic-cons.xyz/wp-content/uploads/Star-Wars-avatars-Movie-Han-Solo-Harrison-Ford.jpg"
+      },
+      "media": {
+        "type": "image",
+        "url": "http://www.augment.com/blog/wp-content/uploads/2015/10/16237219524_348f9088c9_z.jpg"
+      },
+      "text_article": "This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.",
+      "introduction": "This is the article introduction"
+    },
+    {
+      "id": 4,
+      "title": "Article four",
+      "author": {
+        "user_name": "Pepeers",
+        "user_image": "No Image"
+      },
+      "media": {
+        "type": "image",
+        "url": "https://d1lss44hh2trtw.cloudfront.net/assets/article/2018/03/28/oculus-rift-2-two-year-anniversary-celebration-VR-virtual-reality-re_1200x500.jpg"
+      },
+      "text_article": "This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.",
+      "introduction": "This is the article introduction"
+    },
+    {
+      "id": 5,
+      "title": "Article five",
+      "author": {
+        "user_name": "Pepeers",
+        "user_image": "No Image"
+      },
+      "media": {
+        "type": "image",
+        "url": "https://www.washingtonian.com/wp-content/uploads/2017/09/spirit-of-autumn-final.jpg"
+      },
+      "text_article": "This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.",
+      "introduction": "This is the article introduction"
+    },
+    {
+      "id": 6,
+      "title": "Article six",
+      "author": {
+        "user_name": "Pepeers",
+        "user_image": "No Image"
+      },
+      "media": {
+        "type": "image",
+        "url": "https://www.nielsen.com/content/dam/corporate/us/en/images/news-trends/2017-newswire/VR-AR-purchase-interest.jpg"
+      },
+      "text_article": "This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.",
+      "introduction": "This is the article introduction"
+    },
+    {
+      "id": 7,
+      "title": "Article seven",
+      "author": {
+        "user_name": "Pepeers",
+        "user_image": "No Image"
+      },
+      "media": {
+        "type": "video",
+        "url": "<iframe class='video' width='560' height='315' src='https://www.youtube.com/embed/xR7bapGKhg4' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>"
+      },
+      "text_article": "This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.",
+      "introduction": "This is the article introduction"
+    },
+    {
+      "id": 8,
+      "title": "Article six",
+      "author": {
+        "user_name": "Pepeers",
+        "user_image": "No Image"
+      },
+      "media": {
+        "type": "image",
+        "url": "https://www.nielsen.com/content/dam/corporate/us/en/images/news-trends/2017-newswire/VR-AR-purchase-interest.jpg"
+      },
+      "text_article": "This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.",
+      "introduction": "This is the article introduction"
+    },
+    {
+      "id": 9,
+      "title": "Article six",
+      "author": {
+        "user_name": "Pepeers",
+        "user_image": "No Image"
+      },
+      "media": {
+        "type": "image",
+        "url": "https://www.nielsen.com/content/dam/corporate/us/en/images/news-trends/2017-newswire/VR-AR-purchase-interest.jpg"
+      },
+      "text_article": "This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.",
+      "introduction": "This is the article introduction"
+    },
+    {
+      "id": 10,
+      "title": "Article six",
+      "author": {
+        "user_name": "Pepeers",
+        "user_image": "No Image"
+      },
+      "media": {
+        "type": "image",
+        "url": "https://www.nielsen.com/content/dam/corporate/us/en/images/news-trends/2017-newswire/VR-AR-purchase-interest.jpg"
+      },
+      "text_article": "This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.This is a quick description about the article.",
+      "introduction": "This is the article introduction"
+    }
+  ]
+}
