@@ -115,13 +115,13 @@ var prodConfig = {
     minimizer: [
       new OptimizeCSSAssetsPlugin(
         {
-          cssProcessorOptions: { map: { inline: false } }
+          //cssProcessorOptions: { map: { inline: false } }
         }
       ),
       new UglifyJsPlugin({
         cache: true,
         parallel: true,
-        sourceMap: true // set to true if you want JS source maps
+        sourceMap: false // set to true if you want JS source maps
       }),
     ]
   },
